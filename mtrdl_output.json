@@ -1,0 +1,1823 @@
+{
+  "name": "FMT_example",
+  "version": "1.0",
+  "description": "Flight Management System - Converted from SysML model",
+  "dataDictionary": {
+    "types": [
+      {
+        "name": "AltitudeType",
+        "kind": "Int",
+        "min": 0,
+        "max": 10000,
+        "unit": "step=100"
+      }
+    ],
+    "variables": [
+      {
+        "name": "Altitude",
+        "type": "AltitudeType",
+        "attributes": {
+          "stereotype": "Monitored",
+          "owner": "Aircraft State"
+        },
+        "initialValue": 0
+      },
+      {
+        "name": "ASEL height",
+        "type": "AltitudeType",
+        "attributes": {
+          "stereotype": "Monitored",
+          "owner": "Aircraft State"
+        },
+        "initialValue": 5000
+      },
+      {
+        "name": "ASEL height capture condition is met",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "Aircraft State"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "ASEL height is captured",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "Aircraft State"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "is Aircraft on air",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "Aircraft State"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "is Aircraft on ground",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "Aircraft State"
+        },
+        "initialValue": true
+      },
+      {
+        "name": "minimum sensor configuration for AP/FD engagement is met",
+        "type": "boolean",
+        "attributes": {
+          "stereotype": "Monitored",
+          "owner": "Aircraft State"
+        },
+        "initialValue": "True"
+      },
+      {
+        "name": "AP Available Status",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "AP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "AP Engage Status",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "AP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FD Available Status",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "FD"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FD Engage Status",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FD"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "AP_button connection",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FMCP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "APPR_button connection",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FMCP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FLC_button connection",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FMCP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "TLA is in TOGA",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FMCP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "TOGA_button connection",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FMCP"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "ALT_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "ALT_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "ASEL_mode is armed",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "ASEL_arm_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "ASEL_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "ASEL_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FD_STDBY_stauts",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "Logic",
+          "owner": "FD_STDBY"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FLC_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FLC_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "FPA_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "FPA_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "GA_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "GA_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "GS_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "GS_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "lateral_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "lateral_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "LOC_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "LOC_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "Roll_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "Roll_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "TO_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "TO_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "vertical STDBY mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "vertical STDBY"
+        },
+        "initialValue": true
+      },
+      {
+        "name": "vertical STDBY mode is inactive",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "vertical STDBY"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "vertical_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "vertical_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "VS_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "VS_mode"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "WS_mode is active",
+        "type": "Boolean",
+        "attributes": {
+          "stereotype": "State",
+          "owner": "WS_mode"
+        },
+        "initialValue": false
+      }
+    ],
+    "events": [
+      {
+        "name": "ASEL height capture condition become met",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "AP become disengaged",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FD become disengaged",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Press APPR button",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FMCP issues an FLC Request",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Press FLC button",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FMCP TOGA button is pressed",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Press TOGA button",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FMCP issues an ALT hold Request",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Glideslope capture conditions are met",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "VS knob is rotated",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Glideslope capture conditions are met",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "any FD mode become active",
+        "kind": "Derived",
+        "derivation": {
+          "vars": [
+            "any lateral mode become active",
+            "any vertical mode become active"
+          ],
+          "expression": "any lateral mode become active OR any vertical mode become active"
+        },
+        "initialValue": false
+      },
+      {
+        "name": "any lateral mode become active",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "any lateral mode become inactive",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "any vertical mode become active",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "AP become engaged",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "AP fast disconnection happens",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FMCP APPR button was converted from disconnection to connection",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "FMCP issues AP Engage Request",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Loc mode become inactive",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "Press AP button",
+        "kind": "Primitive",
+        "initialValue": false
+      },
+      {
+        "name": "WS mode status become TRUE",
+        "kind": "Primitive",
+        "initialValue": false
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "Aircraft State",
+      "interfaces": {
+        "outputs": {
+          "vars": [
+            "Altitude",
+            "ASEL height",
+            "minimum sensor configuration for AP/FD engagement is met",
+            "ASEL height capture condition is met",
+            "ASEL height is captured",
+            "is Aircraft on air",
+            "is Aircraft on ground"
+          ],
+          "events": [
+            "ASEL height capture condition become met"
+          ]
+        }
+      }
+    },
+    {
+      "name": "AP",
+      "interfaces": {
+        "inputs": {
+          "vars": [
+            "AP_button connection"
+          ],
+          "events": [
+            "AP fast disconnection happens",
+            "FMCP issue AP Engage Request",
+            "FMCP issues AP Engage Request"
+          ]
+        },
+        "encapsulated": {
+          "vars": [
+            "AP Available Status"
+          ]
+        },
+        "outputs": {
+          "vars": [
+            "AP Engage Status"
+          ],
+          "events": [
+            "AP become engaged",
+            "AP become disengaged"
+          ]
+        }
+      }
+    },
+    {
+      "name": "FD",
+      "interfaces": {
+        "inputs": {
+          "events": [
+            "any FD mode is connected"
+          ]
+        },
+        "encapsulated": {
+          "vars": [
+            "FD Available Status"
+          ]
+        },
+        "outputs": {
+          "vars": [
+            "FD Engage Status"
+          ],
+          "events": [
+            "FD become disengaged"
+          ]
+        }
+      }
+    },
+    {
+      "name": "FMCP",
+      "interfaces": {
+        "inputs": {
+          "events": [
+            "Press AP button",
+            "Press APPR button",
+            "Press FLC button",
+            "Press TOGA button"
+          ]
+        },
+        "outputs": {
+          "vars": [
+            "AP_button connection",
+            "APPR_button connection",
+            "FLC_button connection",
+            "TLA is in TOGA",
+            "TOGA_button connection"
+          ],
+          "events": [
+            "FMCP issues an FLC Request",
+            "FMCP APPR button was converted from disconnection to connection",
+            "FMCP TOGA button is pressed",
+            "FMCP issues AP Engage Request"
+          ]
+        }
+      }
+    }
+  ],
+  "modes": [
+    {
+      "name": "ALT_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "ALT_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ASEL_arm_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "ASEL_mode is armed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "ASEL_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "ASEL_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "FD_STDBY",
+      "interfaces": {
+        "internal": {
+          "functionVars": [
+            "FD_STDBY_stauts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "FLC_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "FLC_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "FPA_mode",
+      "interfaces": {
+        "entry": {
+          "events": [
+            "AP become disengaged",
+            "AP become engaged",
+            "ASEL height capture condition become met",
+            "FD become disengaged",
+            "FMCP APPR button was converted from disconnection to connection",
+            "FMCP TOGA button is pressed",
+            "FMCP issues an ALT hold Request",
+            "FMCP issues an FLC Request",
+            "Glideslope capture conditions are met",
+            "Loc mode become inactive",
+            "VS knob is rotated",
+            "any lateral mode become inactive"
+          ]
+        },
+        "run": {
+          "vars": [
+            "ALT_mode is active",
+            "AP Engage Status",
+            "APPR_button connection",
+            "ASEL height capture condition is met",
+            "ASEL_mode is active",
+            "FD Engage Status",
+            "FLC_button connection",
+            "FLC_mode is active",
+            "GA_mode is active",
+            "GS_mode is active",
+            "LOC_mode is active",
+            "TOGA_button connection",
+            "TO_mode is active",
+            "VS_mode is active",
+            "WS_mode is active",
+            "lateral_mode is active",
+            "vertical STDBY mode is active"
+          ],
+          "events": [
+            "FMCP issues an FLC Request",
+            "FMCP APPR button was converted from disconnection to connection",
+            "FMCP TOGA button is pressed",
+            "ASEL height capture condition become met",
+            "AP become engaged",
+            "any lateral mode become inactive",
+            "AP become disengaged",
+            "FD become disengaged",
+            "Loc mode become inactive"
+          ]
+        },
+        "output": {
+          "vars": [
+            "FPA_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GA_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "GA_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GS_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "GS_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "lateral_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "lateral_mode is active"
+          ],
+          "events": [
+            "any lateral mode become inactive"
+          ]
+        }
+      }
+    },
+    {
+      "name": "LOC_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "LOC_mode is active"
+          ],
+          "events": [
+            "Loc mode become inactive"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Roll_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "Roll_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "TO_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "TO_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical STDBY",
+      "interfaces": {
+        "run": {
+          "vars": [
+            "FPA_mode is active",
+            "GS_mode is active"
+          ]
+        },
+        "output": {
+          "vars": [
+            "vertical STDBY mode is active",
+            "vertical STDBY mode is inactive"
+          ]
+        }
+      }
+    },
+    {
+      "name": "vertical_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "vertical_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "VS_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "VS_mode is active"
+          ]
+        }
+      }
+    },
+    {
+      "name": "WS_mode",
+      "interfaces": {
+        "output": {
+          "vars": [
+            "WS_mode is active"
+          ]
+        }
+      }
+    }
+  ],
+  "relations": [
+    {
+      "relType": "refine",
+      "e1": "Aircraft State",
+      "e2": "ALT_mode",
+      "name": "refine_Aircraft State_ALT_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "arm_of",
+      "e1": "AP",
+      "e2": "ASEL_arm_mode",
+      "name": "arm_of_AP_ASEL_arm_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "ASEL_arm_mode",
+      "e2": "ASEL_mode",
+      "name": "refine_ASEL_arm_mode_ASEL_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "FD_STDBY",
+      "e2": "FLC_mode",
+      "name": "refine_FD_STDBY_FLC_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "FMCP",
+      "e2": "FPA_mode",
+      "name": "refine_FMCP_FPA_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "FPA_mode",
+      "e2": "GA_mode",
+      "name": "refine_FPA_mode_GA_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "GA_mode",
+      "e2": "GS_mode",
+      "name": "refine_GA_mode_GS_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "GS_mode",
+      "e2": "lateral_mode",
+      "name": "refine_GS_mode_lateral_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "Roll_mode",
+      "e2": "TO_mode",
+      "name": "refine_Roll_mode_TO_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "exclude",
+      "e1": "TO_mode",
+      "e2": "vertical STDBY",
+      "name": "exclude_TO_mode_vertical STDBY",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "vertical STDBY",
+      "e2": "vertical_mode",
+      "name": "refine_vertical STDBY_vertical_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "vertical STDBY",
+      "e2": "vertical_mode",
+      "name": "refine_vertical STDBY_vertical_mode",
+      "params": {
+        "note": "端点通过位置推断"
+      }
+    }
+  ],
+  "processes": [
+    {
+      "name": "AP Engage",
+      "owner": "AP",
+      "sets": {
+        "read": [
+          "AP Engage Status",
+          "AP_button connection"
+        ],
+        "write": [
+          "AP Engage Status"
+        ],
+        "trigger": [
+          "FMCP issue AP Engage Request",
+          "AP fast disconnection happens",
+          "FMCP issues AP Engage Request"
+        ]
+      },
+      "states": [
+        "AP Disengage",
+        "AP Engage"
+      ],
+      "statePredicates": {
+        "AP Disengage": "AP Engage Status == false",
+        "AP Engage": "AP Engage Status == true"
+      },
+      "transitions": [
+        {
+          "source": "AP Disengage",
+          "target": "AP Engage",
+          "triggerEvents": [
+            "FMCP issue AP Engage Request"
+          ],
+          "actions": [
+            {
+              "var": "AP Engage Status",
+              "expr": "true"
+            }
+          ]
+        },
+        {
+          "source": "AP Engage",
+          "target": "AP Disengage",
+          "triggerEvents": [
+            "AP fast disconnection happens",
+            "FMCP issues AP Engage Request"
+          ],
+          "actions": [
+            {
+              "var": "AP Engage Status",
+              "expr": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FD Engage status",
+      "owner": "FD",
+      "sets": {
+        "read": [
+          "FD Engage Status"
+        ],
+        "write": [
+          "FD Engage Status"
+        ],
+        "trigger": [
+          "any FD mode is connected"
+        ]
+      },
+      "states": [
+        "FD disengage",
+        "FD engage"
+      ],
+      "statePredicates": {
+        "FD disengage": "FD Engage Status == false",
+        "FD engage": "FD Engage Status == true"
+      },
+      "transitions": [
+        {
+          "source": "FD disengage",
+          "target": "FD engage",
+          "triggerEvents": [
+            "any FD mode is connected"
+          ],
+          "actions": [
+            {
+              "var": "FD Engage Status",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AP button Status",
+      "owner": "FMCP",
+      "sets": {
+        "read": [
+          "AP_button connection"
+        ],
+        "write": [
+          "AP_button connection"
+        ],
+        "trigger": [
+          "Press AP button"
+        ]
+      },
+      "states": [
+        "AP button Connection",
+        "AP button Disconnection"
+      ],
+      "statePredicates": {
+        "AP button Connection": "AP_button connection == true",
+        "AP button Disconnection": "AP_button connection == false"
+      },
+      "transitions": [
+        {
+          "source": "AP button Connection",
+          "target": "AP button Disconnection",
+          "triggerEvents": [
+            "Press AP button"
+          ],
+          "actions": [
+            {
+              "var": "AP_button connection",
+              "expr": "false"
+            }
+          ]
+        },
+        {
+          "source": "AP button Disconnection",
+          "target": "AP button Connection",
+          "triggerEvents": [
+            "Press AP button"
+          ],
+          "actions": [
+            {
+              "var": "AP_button connection",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "APPR button status",
+      "owner": "FMCP",
+      "sets": {
+        "read": [
+          "APPR_button connection"
+        ],
+        "write": [
+          "APPR_button connection"
+        ],
+        "trigger": [
+          "Press APPR button"
+        ]
+      },
+      "states": [
+        "button connection",
+        "button disconnection"
+      ],
+      "statePredicates": {
+        "button connection": "APPR_button connection == true",
+        "button disconnection": "APPR_button connection == false"
+      },
+      "transitions": [
+        {
+          "source": "button connection",
+          "target": "button disconnection",
+          "triggerEvents": [
+            "Press APPR button"
+          ],
+          "actions": [
+            {
+              "var": "APPR_button connection",
+              "expr": "false"
+            }
+          ]
+        },
+        {
+          "source": "button disconnection",
+          "target": "button connection",
+          "triggerEvents": [
+            "Press APPR button"
+          ],
+          "actions": [
+            {
+              "var": "APPR_button connection",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FLC button status",
+      "owner": "FMCP",
+      "sets": {
+        "read": [
+          "FLC_button connection"
+        ],
+        "write": [
+          "FLC_button connection"
+        ],
+        "trigger": [
+          "Press FLC button"
+        ]
+      },
+      "states": [
+        "button connection",
+        "button disconnection"
+      ],
+      "statePredicates": {
+        "button connection": "FLC_button connection == true",
+        "button disconnection": "FLC_button connection == false"
+      },
+      "transitions": [
+        {
+          "source": "button connection",
+          "target": "button disconnection",
+          "triggerEvents": [
+            "Press FLC button"
+          ],
+          "actions": [
+            {
+              "var": "FLC_button connection",
+              "expr": "false"
+            }
+          ]
+        },
+        {
+          "source": "button disconnection",
+          "target": "button connection",
+          "triggerEvents": [
+            "Press FLC button"
+          ],
+          "actions": [
+            {
+              "var": "FLC_button connection",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TOGA button status",
+      "owner": "FMCP",
+      "sets": {
+        "read": [
+          "TOGA_button connection"
+        ],
+        "write": [
+          "TOGA_button connection"
+        ],
+        "trigger": [
+          "Press TOGA button"
+        ]
+      },
+      "states": [
+        "button connection",
+        "button disconnection"
+      ],
+      "statePredicates": {
+        "button connection": "TOGA_button connection == true",
+        "button disconnection": "TOGA_button connection == false"
+      },
+      "transitions": [
+        {
+          "source": "button connection",
+          "target": "button disconnection",
+          "triggerEvents": [
+            "Press TOGA button"
+          ],
+          "actions": [
+            {
+              "var": "TOGA_button connection",
+              "expr": "false"
+            }
+          ]
+        },
+        {
+          "source": "button disconnection",
+          "target": "button connection",
+          "triggerEvents": [
+            "Press TOGA button"
+          ],
+          "actions": [
+            {
+              "var": "TOGA_button connection",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FPA_mode entry",
+      "owner": "FPA_mode",
+      "sets": {
+        "read": [
+          "AP Engage Status",
+          "APPR_button connection",
+          "FPA_mode is active",
+          "LOC_mode is active"
+        ],
+        "write": [
+          "FPA_mode is active"
+        ],
+        "trigger": [
+          "FMCP APPR button was converted from disconnection to connection",
+          "AP become engaged",
+          "Loc mode become inactive"
+        ]
+      },
+      "states": [
+        "FPA_mode active",
+        "FPA_mode inactive"
+      ],
+      "statePredicates": {
+        "FPA_mode active": "FPA_mode is active == true",
+        "FPA_mode inactive": "FPA_mode is active == false"
+      },
+      "transitions": [
+        {
+          "source": "FPA_mode inactive",
+          "target": "FPA_mode active",
+          "triggerEvents": [
+            "FMCP APPR button was converted from disconnection to connection"
+          ],
+          "actions": [
+            {
+              "var": "FPA_mode is active",
+              "expr": "true"
+            }
+          ]
+        },
+        {
+          "source": "FPA_mode inactive",
+          "target": "FPA_mode active",
+          "triggerEvents": [
+            "AP become engaged"
+          ],
+          "actions": [
+            {
+              "var": "FPA_mode is active",
+              "expr": "true"
+            }
+          ]
+        },
+        {
+          "source": "FPA_mode inactive",
+          "target": "FPA_mode active",
+          "actions": [
+            {
+              "var": "FPA_mode is active",
+              "expr": "true"
+            }
+          ]
+        },
+        {
+          "source": "FPA_mode inactive",
+          "target": "FPA_mode active",
+          "actions": [
+            {
+              "var": "FPA_mode is active",
+              "expr": "true"
+            }
+          ]
+        },
+        {
+          "source": "FPA_mode inactive",
+          "target": "FPA_mode active",
+          "triggerEvents": [
+            "Loc mode become inactive"
+          ],
+          "actions": [
+            {
+              "var": "FPA_mode is active",
+              "expr": "true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FPA_mode exit",
+      "owner": "FPA_mode",
+      "sets": {
+        "read": [
+          "ALT_mode is active",
+          "AP Engage Status",
+          "ASEL height capture condition is met",
+          "ASEL_mode is active",
+          "FD Engage Status",
+          "FLC_button connection",
+          "FLC_mode is active",
+          "FPA_mode is active",
+          "GA_mode is active",
+          "GS_mode is active",
+          "TOGA_button connection",
+          "TO_mode is active",
+          "VS_mode is active",
+          "WS_mode is active",
+          "lateral_mode is active",
+          "vertical STDBY mode is active"
+        ],
+        "write": [
+          "FPA_mode is active"
+        ],
+        "trigger": [
+          "Glideslope capture conditions are met",
+          "FD become disengaged",
+          "any lateral mode become inactive",
+          "VS knob is rotated",
+          "AP become disengaged",
+          "FMCP issues an FLC Request",
+          "ASEL height capture condition become met",
+          "FMCP TOGA button is pressed",
+          "FMCP issues an ALT hold Request"
+        ]
+      },
+      "states": [
+        "ALT active",
+        "ASEL active",
+        "composite state1",
+        "composite state2",
+        "composite state3",
+        "composite state4",
+        "composite state5",
+        "composite state6",
+        "composite state7",
+        "composite state8",
+        "composite state9",
+        "FLC active",
+        "FPA active",
+        "FPA inactive",
+        "GA active",
+        "GS active",
+        "TO active",
+        "vertical STDBY active",
+        "VS active",
+        "WS active"
+      ],
+      "statePredicates": {
+        "ALT active": "ALT_mode is active == true",
+        "ASEL active": "ASEL_mode is active == true",
+        "composite state1": "AND(FPA inactive, vertical STDBY active)",
+        "composite state2": "AND(FPA inactive, GS active)",
+        "composite state3": "AND(FLC active, FPA inactive)",
+        "composite state4": "AND(FPA inactive, WS active)",
+        "composite state5": "AND(ASEL active, FPA inactive)",
+        "composite state6": "AND(FPA inactive, VS active)",
+        "composite state7": "AND(ALT active, FPA inactive)",
+        "composite state8": "AND(FPA inactive, TO active)",
+        "composite state9": "AND(FPA inactive, GA active)",
+        "FLC active": "FLC_mode is active == true",
+        "FPA active": "FPA_mode is active == false",
+        "FPA inactive": "FPA_mode is active == false",
+        "GA active": "GA_mode is active == true",
+        "GS active": "GS_mode is active == true",
+        "TO active": "TO_mode is active == true",
+        "vertical STDBY active": "vertical STDBY mode is active == true",
+        "VS active": "VS_mode is active == true",
+        "WS active": "WS_mode is active == true"
+      },
+      "transitions": [
+        {
+          "source": "FPA active",
+          "target": "composite state2",
+          "triggerEvents": [
+            "Glideslope capture conditions are met"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state1",
+          "triggerEvents": [
+            "FD become disengaged",
+            "any lateral mode become inactive"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state6",
+          "triggerEvents": [
+            "VS knob is rotated"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state1",
+          "triggerEvents": [
+            "AP become disengaged"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state3",
+          "triggerEvents": [
+            "FMCP issues an FLC Request"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state5",
+          "triggerEvents": [
+            "ASEL height capture condition become met"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state8",
+          "triggerEvents": [
+            "FMCP TOGA button is pressed"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state7",
+          "triggerEvents": [
+            "FMCP issues an ALT hold Request"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state4",
+          "triggerEvents": [
+            "FMCP TOGA button is pressed"
+          ]
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state9",
+          "triggerEvents": [
+            "FMCP TOGA button is pressed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lateral_mode active",
+      "owner": "lateral_mode",
+      "sets": {
+        "read": [
+          "lateral_mode is active"
+        ],
+        "write": [
+          "lateral_mode is active"
+        ],
+        "trigger": []
+      },
+      "states": [
+        "lateral_mode is active"
+      ],
+      "statePredicates": {
+        "lateral_mode is active": "lateral_mode is active == true"
+      },
+      "transitions": []
+    },
+    {
+      "name": "StateMachine1",
+      "owner": "vertical STDBY",
+      "sets": {
+        "read": [
+          "FPA_mode is active",
+          "GS_mode is active",
+          "vertical STDBY mode is active"
+        ],
+        "write": [
+          "vertical STDBY mode is active"
+        ],
+        "trigger": []
+      },
+      "states": [
+        "composite state1",
+        "composite state2",
+        "FPA active",
+        "FPA inactive",
+        "GS active",
+        "vertical STDBY active"
+      ],
+      "statePredicates": {
+        "composite state1": "AND(FPA inactive, vertical STDBY active)",
+        "composite state2": "AND(FPA inactive, GS active)",
+        "FPA active": "FPA_mode is active == true",
+        "FPA inactive": "FPA_mode is active == false",
+        "GS active": "GS_mode is active == true",
+        "vertical STDBY active": "vertical STDBY mode is active == true"
+      },
+      "transitions": [
+        {
+          "source": "FPA active",
+          "target": "composite state2"
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state1"
+        },
+        {
+          "source": "FPA active",
+          "target": "composite state1"
+        }
+      ]
+    },
+    {
+      "name": "vertical_mode active",
+      "owner": "vertical_mode",
+      "sets": {
+        "read": [
+          "vertical_mode is active"
+        ],
+        "write": [
+          "vertical_mode is active"
+        ],
+        "trigger": []
+      },
+      "states": [
+        "vertical mode active"
+      ],
+      "statePredicates": {
+        "vertical mode active": "vertical_mode is active == true"
+      },
+      "transitions": []
+    }
+  ],
+  "communications": [
+    {
+      "name": "comm_1",
+      "sender": "FMCP",
+      "receiver": "AP",
+      "type": "DATAFLOW",
+      "content": [
+        "AP_button connection"
+      ]
+    },
+    {
+      "name": "comm_evt_2",
+      "sender": "FMCP",
+      "receiver": "AP",
+      "type": "EVENT",
+      "content": [
+        "FMCP issues AP Engage Request"
+      ]
+    },
+    {
+      "name": "comm_3",
+      "sender": "AP",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "AP Engage Status"
+      ]
+    },
+    {
+      "name": "comm_4",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "APPR_button connection"
+      ]
+    },
+    {
+      "name": "comm_5",
+      "sender": "LOC_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "LOC_mode is active"
+      ]
+    },
+    {
+      "name": "comm_evt_6",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "FMCP APPR button was converted from disconnection to connection"
+      ]
+    },
+    {
+      "name": "comm_evt_7",
+      "sender": "AP",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "AP become engaged"
+      ]
+    },
+    {
+      "name": "comm_evt_8",
+      "sender": "LOC_mode",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "Loc mode become inactive"
+      ]
+    },
+    {
+      "name": "comm_9",
+      "sender": "ALT_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "ALT_mode is active"
+      ]
+    },
+    {
+      "name": "comm_10",
+      "sender": "Aircraft State",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "ASEL height capture condition is met"
+      ]
+    },
+    {
+      "name": "comm_11",
+      "sender": "ASEL_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "ASEL_mode is active"
+      ]
+    },
+    {
+      "name": "comm_12",
+      "sender": "FD",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "FD Engage Status"
+      ]
+    },
+    {
+      "name": "comm_13",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "FLC_button connection"
+      ]
+    },
+    {
+      "name": "comm_14",
+      "sender": "FLC_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "FLC_mode is active"
+      ]
+    },
+    {
+      "name": "comm_15",
+      "sender": "GA_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "GA_mode is active"
+      ]
+    },
+    {
+      "name": "comm_16",
+      "sender": "GS_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "GS_mode is active"
+      ]
+    },
+    {
+      "name": "comm_17",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "TOGA_button connection"
+      ]
+    },
+    {
+      "name": "comm_18",
+      "sender": "TO_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "TO_mode is active"
+      ]
+    },
+    {
+      "name": "comm_19",
+      "sender": "VS_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "VS_mode is active"
+      ]
+    },
+    {
+      "name": "comm_20",
+      "sender": "WS_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "WS_mode is active"
+      ]
+    },
+    {
+      "name": "comm_21",
+      "sender": "lateral_mode",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "lateral_mode is active"
+      ]
+    },
+    {
+      "name": "comm_22",
+      "sender": "vertical STDBY",
+      "receiver": "FPA_mode",
+      "type": "DATAFLOW",
+      "content": [
+        "vertical STDBY mode is active"
+      ]
+    },
+    {
+      "name": "comm_evt_23",
+      "sender": "FD",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "FD become disengaged"
+      ]
+    },
+    {
+      "name": "comm_evt_24",
+      "sender": "lateral_mode",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "any lateral mode become inactive"
+      ]
+    },
+    {
+      "name": "comm_evt_25",
+      "sender": "AP",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "AP become disengaged"
+      ]
+    },
+    {
+      "name": "comm_evt_26",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "FMCP issues an FLC Request"
+      ]
+    },
+    {
+      "name": "comm_evt_27",
+      "sender": "Aircraft State",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "ASEL height capture condition become met"
+      ]
+    },
+    {
+      "name": "comm_evt_28",
+      "sender": "FMCP",
+      "receiver": "FPA_mode",
+      "type": "EVENT",
+      "content": [
+        "FMCP TOGA button is pressed"
+      ]
+    },
+    {
+      "name": "comm_29",
+      "sender": "FPA_mode",
+      "receiver": "vertical STDBY",
+      "type": "DATAFLOW",
+      "content": [
+        "FPA_mode is active"
+      ]
+    },
+    {
+      "name": "comm_30",
+      "sender": "GS_mode",
+      "receiver": "vertical STDBY",
+      "type": "DATAFLOW",
+      "content": [
+        "GS_mode is active"
+      ]
+    }
+  ],
+  "derivation_rules": [
+    {
+      "owner": "Aircraft State",
+      "target": "is Aircraft on air",
+      "expression": "Altitude>0",
+      "name": "Aircraft altitude_On air"
+    },
+    {
+      "owner": "Aircraft State",
+      "target": "is Aircraft on ground",
+      "expression": "Altitude=0",
+      "name": "Aircraft altitude_On ground"
+    },
+    {
+      "owner": "Aircraft State",
+      "target": "ASEL height capture condition is met",
+      "expression": "(Altitude - ASEL height < 1000) & (ASEL height - Altitude < 1000)",
+      "name": "ASEL height condition_FMSysML state1"
+    },
+    {
+      "owner": "Aircraft State",
+      "target": "ASEL height is captured",
+      "expression": "(Altitude - ASEL height <= 100) & (ASEL height - Altitude <= 100)",
+      "name": "ASEL height condition_FMSysML state2"
+    },
+    {
+      "owner": "AP",
+      "target": "AP Available Status",
+      "expression": "DEFAULT_TRUE",
+      "name": "AP available_AP Available"
+    },
+    {
+      "owner": "FD",
+      "target": "FD Available Status",
+      "expression": "DEFAULT_TRUE",
+      "name": "FD Available Status_FD Available"
+    },
+    {
+      "owner": "FD_STDBY",
+      "target": "FD_STDBY_stauts",
+      "expression": "DEFAULT_TRUE",
+      "name": "FD_STDBY_status_STDBY_mode active"
+    },
+    {
+      "owner": "vertical STDBY",
+      "target": "vertical STDBY mode is inactive",
+      "expression": "vertical_mode is active=TRUE",
+      "name": "vertical STDBY mode is inactive_vertical STDBY mode is inactive"
+    }
+  ]
+}
