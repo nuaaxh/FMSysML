@@ -622,7 +622,6 @@
           "id": "EAID_2A9B1AD5_3276_4021_8F33_47DB92219C76",
           "name": "ASEL height capture condition become met",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -704,7 +703,6 @@
           "id": "EAID_E5BF10B9_CE45_4c96_8783_2079CD9F58AD",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -716,7 +714,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_97F94AF3_49B5_42c3_BE62_ED331483D316",
+            "target_name": "ALT_mode",
+            "member_ends": [
+              "EAID_dstBF10B9_CE45_4c96_8783_2079CD9F58AD",
+              "EAID_srcBF10B9_CE45_4c96_8783_2079CD9F58AD"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_97F94AF3_49B5_42c3_BE62_ED331483D316"
+            ]
+          }
         },
         {
           "id": "EAID_3E95C2B7_AA9A_4fe4_A300_599DDF8112B0",
@@ -1099,7 +1110,6 @@
           "id": "EAID_A93D3A35_F9A4_4a6b_AE35_B6FF69ECECE4",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1111,13 +1121,19 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_CA6F6B95_2801_4caa_893C_BC3EE3C5D363",
+            "source_name": "AP available",
+            "target_ref": "EAID_AE87F6EA_D3E5_44e0_B522_766C5423C1BE",
+            "target_name": "Req 001",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_2DA70EFB_A111_464d_8D59_7267CD0D6329",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1129,13 +1145,19 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_87D92FF8_F206_49bc_9922_D6AA5B02469C",
+            "source_name": "AP Engage",
+            "target_ref": "EAID_FC24263F_9505_4e9f_9A29_BF5711A5DF29",
+            "target_name": "Req 005",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_AC9457C7_EF79_4a03_8031_B56B56A4BE62",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1147,13 +1169,19 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_87D92FF8_F206_49bc_9922_D6AA5B02469C",
+            "source_name": "AP Engage",
+            "target_ref": "EAID_A8BB3324_4790_44ae_825A_8E5652E0F12C",
+            "target_name": "Req 003",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_FFE8E64D_045F_45c7_A848_7493DBBCD8D8",
           "name": "AP become disengaged",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -1235,7 +1263,6 @@
           "id": "EAID_16CFA3CC_83FB_42eb_997E_07057C658C0D",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "arm_of"
           ],
@@ -1247,7 +1274,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_A518E27D_5795_43ce_8FAC_648577D605A0",
+            "source_name": "ASEL_arm_mode",
+            "target_ref": "EAID_D6BD68E2_9066_4779_B791_1B0F122E39C9",
+            "target_name": "ASEL_mode",
+            "member_ends": [
+              "EAID_dstCFA3CC_83FB_42eb_997E_07057C658C0D",
+              "EAID_srcCFA3CC_83FB_42eb_997E_07057C658C0D"
+            ],
+            "owned_ends": [
+              "EAID_D6BD68E2_9066_4779_B791_1B0F122E39C9",
+              "EAID_A518E27D_5795_43ce_8FAC_648577D605A0"
+            ]
+          }
         },
         {
           "id": "EAID_D6BD68E2_9066_4779_B791_1B0F122E39C9",
@@ -1312,7 +1352,6 @@
           "id": "EAID_9C343186_D447_4e43_9B32_5E41CDB62B99",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -1324,7 +1363,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_D6BD68E2_9066_4779_B791_1B0F122E39C9",
+            "target_name": "ASEL_mode",
+            "member_ends": [
+              "EAID_dst343186_D447_4e43_9B32_5E41CDB62B99",
+              "EAID_src343186_D447_4e43_9B32_5E41CDB62B99"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_D6BD68E2_9066_4779_B791_1B0F122E39C9"
+            ]
+          }
         },
         {
           "id": "EAID_C0CFE4DE_B1FB_48b7_8052_2A36D62B9116",
@@ -1657,7 +1709,6 @@
           "id": "EAID_75E425D8_D085_4616_939D_19BE4A60E32D",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1669,13 +1720,19 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_5A08607E_E666_4680_81F4_47C53718174E",
+            "source_name": "FD Available Status",
+            "target_ref": "EAID_ACB6ABC1_F313_44b6_8990_4C9D127C554C",
+            "target_name": "Req 002",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_B86C8B5A_4B19_4eee_A3B1_31DC234BE0F4",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1687,13 +1744,19 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_69083863_238B_4df7_A9A4_A5D4ADD467A3",
+            "source_name": "FD Engage status",
+            "target_ref": "EAID_076F89BC_531F_4658_A0FD_1C4FABE65CFA",
+            "target_name": "Req 006",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_D26842EC_39F2_4439_AB97_46225BDE8888",
           "name": "FD become disengaged",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -1880,7 +1943,6 @@
           "id": "EAID_915DA899_C589_42a8_A751_6E0E96177834",
           "name": null,
           "type": "uml:Dependency",
-          "visibility": "public",
           "stereotypes": [
             "satisfy"
           ],
@@ -1892,7 +1954,14 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_259F8C12_4357_41ba_A5E8_0498119A3C83",
+            "source_name": "FD_STDBY_status",
+            "target_ref": "EAID_FA26C6ED_7273_46b5_A3AE_23A2AC49F69A",
+            "target_name": "Req 004",
+            "member_ends": [],
+            "owned_ends": []
+          }
         },
         {
           "id": "EAID_5DE19C7A_6774_4e19_8570_AE1668934977",
@@ -1957,7 +2026,6 @@
           "id": "EAID_A1619D08_DD39_425b_82E7_6F11610D3132",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -1969,7 +2037,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_5DE19C7A_6774_4e19_8570_AE1668934977",
+            "target_name": "FLC_mode",
+            "member_ends": [
+              "EAID_dst619D08_DD39_425b_82E7_6F11610D3132",
+              "EAID_src619D08_DD39_425b_82E7_6F11610D3132"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_5DE19C7A_6774_4e19_8570_AE1668934977"
+            ]
+          }
         },
         {
           "id": "EAID_C7DD2FF3_E0BC_4c3f_8B37_6AF9BB6BE88D",
@@ -2844,7 +2925,6 @@
           "id": "EAID_E8B33607_B206_41c1_BA5F_FA24387D6E5D",
           "name": "Press APPR button",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -2865,7 +2945,6 @@
           "id": "EAID_D3801475_0440_4063_A15B_F69C9A9B1367",
           "name": "FMCP issues an FLC Request",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -2888,7 +2967,6 @@
           "id": "EAID_504D16D2_2D30_4d36_9461_D54484F6F2DE",
           "name": "Press FLC button",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -2909,7 +2987,6 @@
           "id": "EAID_BFD2D965_0A02_4d81_AE9E_2BF9CBE8208C",
           "name": "FMCP TOGA button is pressed",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -2932,7 +3009,6 @@
           "id": "EAID_0948FFC8_08DC_4b41_BAB6_21C1567A50F1",
           "name": "Press TOGA button",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -4259,7 +4335,6 @@
           "id": "EAID_AF7BEA9C_D98A_46ef_98B3_111BA51E7FCB",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -4271,13 +4346,25 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_C6630FBF_427E_4548_AF80_0DB37284F0BF",
+            "target_name": "FPA_mode",
+            "member_ends": [
+              "EAID_dst7BEA9C_D98A_46ef_98B3_111BA51E7FCB",
+              "EAID_src7BEA9C_D98A_46ef_98B3_111BA51E7FCB"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_C6630FBF_427E_4548_AF80_0DB37284F0BF"
+            ]
+          }
         },
         {
           "id": "EAID_D39B3382_835C_499b_A115_487C7ADF7983",
           "name": "FMCP issues an ALT hold Request",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -4298,7 +4385,6 @@
           "id": "EAID_24F89C65_314E_49f2_9D09_32DBB3B11A05",
           "name": "Glideslope capture conditions are met",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -4319,7 +4405,6 @@
           "id": "EAID_C6989CA7_4027_41de_BC82_7354464B0F96",
           "name": "VS knob is rotated",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -4399,7 +4484,6 @@
           "id": "EAID_CBEAA744_398F_4022_900C_E31E7D47D902",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -4411,7 +4495,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_F5BF8E10_A177_49a6_A6FE_16AE68237A51",
+            "target_name": "GA_mode",
+            "member_ends": [
+              "EAID_dstEAA744_398F_4022_900C_E31E7D47D902",
+              "EAID_srcEAA744_398F_4022_900C_E31E7D47D902"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_F5BF8E10_A177_49a6_A6FE_16AE68237A51"
+            ]
+          }
         },
         {
           "id": "EAID_FCD8A5C2_8C5A_4f42_950C_C458B63E0BB2",
@@ -4476,7 +4573,6 @@
           "id": "EAID_B85B0AFF_5D84_44cd_9105_9FF1C7FC17D8",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -4488,7 +4584,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_FCD8A5C2_8C5A_4f42_950C_C458B63E0BB2",
+            "target_name": "GS_mode",
+            "member_ends": [
+              "EAID_dst5B0AFF_5D84_44cd_9105_9FF1C7FC17D8",
+              "EAID_src5B0AFF_5D84_44cd_9105_9FF1C7FC17D8"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_FCD8A5C2_8C5A_4f42_950C_C458B63E0BB2"
+            ]
+          }
         },
         {
           "id": "EAID_A2CF839A_0A09_4f43_9AE5_6529C8E2BC97",
@@ -4646,7 +4755,6 @@
           "id": "EAID_E6937B66_629E_417f_8620_E4EAA85AEC06",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -4658,7 +4766,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_A2CF839A_0A09_4f43_9AE5_6529C8E2BC97",
+            "source_name": "lateral_mode",
+            "target_ref": "EAID_3AC8F155_E30B_4edc_9EDF_994CB0D6F704",
+            "target_name": "LOC_mode",
+            "member_ends": [
+              "EAID_dst937B66_629E_417f_8620_E4EAA85AEC06",
+              "EAID_src937B66_629E_417f_8620_E4EAA85AEC06"
+            ],
+            "owned_ends": [
+              "EAID_3AC8F155_E30B_4edc_9EDF_994CB0D6F704",
+              "EAID_A2CF839A_0A09_4f43_9AE5_6529C8E2BC97"
+            ]
+          }
         },
         {
           "id": "EAID_3AC8F155_E30B_4edc_9EDF_994CB0D6F704",
@@ -4841,7 +4962,6 @@
           "id": "EAID_409E1BE2_4AA2_47fa_8ADE_1ACB469F161E",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -4853,7 +4973,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_7C0DC378_890A_456a_BE29_9F34379F50FC",
+            "target_name": "TO_mode",
+            "member_ends": [
+              "EAID_dst9E1BE2_4AA2_47fa_8ADE_1ACB469F161E",
+              "EAID_src9E1BE2_4AA2_47fa_8ADE_1ACB469F161E"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_7C0DC378_890A_456a_BE29_9F34379F50FC"
+            ]
+          }
         },
         {
           "id": "EAID_15C93B01_B163_42e2_BCF0_0B10EE9271BE",
@@ -5376,7 +5509,6 @@
           "id": "EAID_F1F34E5F_8CBB_4770_840C_16BAC5EA36FE",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "exclude"
           ],
@@ -5388,13 +5520,25 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_15C93B01_B163_42e2_BCF0_0B10EE9271BE",
+            "target_name": "vertical STDBY",
+            "member_ends": [
+              "EAID_dstF34E5F_8CBB_4770_840C_16BAC5EA36FE",
+              "EAID_srcF34E5F_8CBB_4770_840C_16BAC5EA36FE"
+            ],
+            "owned_ends": [
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+              "EAID_15C93B01_B163_42e2_BCF0_0B10EE9271BE"
+            ]
+          }
         },
         {
           "id": "EAID_70BC14E5_64EE_44e6_82DC_7FA7574C6A2C",
           "name": "Glideslope capture conditions are met",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -5567,7 +5711,6 @@
           "id": "EAID_3D105C17_24DD_4ea1_8030_61FE4357F69D",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -5579,13 +5722,25 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_14164733_E2CB_4f5d_88D3_3818BF647C34",
+            "target_name": "VS_mode",
+            "member_ends": [
+              "EAID_dst105C17_24DD_4ea1_8030_61FE4357F69D",
+              "EAID_src105C17_24DD_4ea1_8030_61FE4357F69D"
+            ],
+            "owned_ends": [
+              "EAID_14164733_E2CB_4f5d_88D3_3818BF647C34",
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356"
+            ]
+          }
         },
         {
           "id": "EAID_9D687BF1_9FDE_4d3c_8A3C_E6F37EC240E2",
           "name": null,
           "type": "uml:Association",
-          "visibility": "public",
           "stereotypes": [
             "refine"
           ],
@@ -5597,7 +5752,20 @@
             }
           ],
           "tagged_values": {},
-          "annotations": []
+          "endpoints": {
+            "source_ref": "EAID_FB521F5C_919D_44c8_800A_99359C472356",
+            "source_name": "vertical_mode",
+            "target_ref": "EAID_CC2B0A1E_D977_42a1_876B_15B8748B3629",
+            "target_name": "WS_mode",
+            "member_ends": [
+              "EAID_dst687BF1_9FDE_4d3c_8A3C_E6F37EC240E2",
+              "EAID_src687BF1_9FDE_4d3c_8A3C_E6F37EC240E2"
+            ],
+            "owned_ends": [
+              "EAID_CC2B0A1E_D977_42a1_876B_15B8748B3629",
+              "EAID_FB521F5C_919D_44c8_800A_99359C472356"
+            ]
+          }
         },
         {
           "id": "EAID_14164733_E2CB_4f5d_88D3_3818BF647C34",
@@ -6846,7 +7014,6 @@
           "id": "EAID_84F70742_78CF_4e7f_8FFC_5809DDDC2C62",
           "name": "any FD mode become active",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Composite Event"
           ],
@@ -6869,7 +7036,6 @@
           "id": "EAID_7E95397E_B447_4b60_8C83_7051F15FFE49",
           "name": "any lateral mode become active",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -6892,7 +7058,6 @@
           "id": "EAID_A16ACC39_F030_4d44_8C30_61399A9184F7",
           "name": "any lateral mode become inactive",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -6915,7 +7080,6 @@
           "id": "EAID_975D4834_6AD9_4d28_B39A_6B0E1C469CB2",
           "name": "any vertical mode become active",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -6938,7 +7102,6 @@
           "id": "EAID_422C2F2A_3D4C_4f2b_877E_FCBAC7E4E818",
           "name": "AP become engaged",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -6961,7 +7124,6 @@
           "id": "EAID_FC4CC5B4_2F2B_4d44_886E_52954AE3FBB6",
           "name": "AP fast disconnection happens",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -6982,7 +7144,6 @@
           "id": "EAID_5FF6E15B_2A67_4d92_869A_634C11744C73",
           "name": "FMCP APPR button was converted from disconnection to connection",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -7005,7 +7166,6 @@
           "id": "EAID_EBD3EE5F_EF2B_4cbb_B21A_E1CA8711760D",
           "name": "FMCP issues AP Engage Request",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -7028,7 +7188,6 @@
           "id": "EAID_77441060_09E0_48e1_B40F_4D887E923BD9",
           "name": "Loc mode become inactive",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -7051,7 +7210,6 @@
           "id": "EAID_79174A8A_ADEC_462f_AE38_130EDC2B8A52",
           "name": "Press AP button",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Undefined Event"
           ],
@@ -7072,7 +7230,6 @@
           "id": "EAID_17D20DF3_7F2D_454d_9333_F3915BB91617",
           "name": "WS mode status become TRUE",
           "type": "uml:Signal",
-          "visibility": "public",
           "stereotypes": [
             "Automic Event"
           ],
@@ -7088,62 +7245,6 @@
               }
             }
           ],
-          "tagged_values": {},
-          "annotations": []
-        }
-      ]
-    },
-    {
-      "id": "EAPrimitiveTypesPackage",
-      "name": "EA_PrimitiveTypes_Package",
-      "type": "uml:Package",
-      "visibility": "public",
-      "stereotypes": [],
-      "fms_annotations": [],
-      "tagged_values": {},
-      "annotations": [],
-      "children": [
-        {
-          "id": "EAJavaTypesPackage",
-          "name": "EA_Java_Types_Package",
-          "type": "uml:Package",
-          "visibility": "public",
-          "stereotypes": [],
-          "fms_annotations": [],
-          "tagged_values": {},
-          "annotations": [],
-          "children": [
-            {
-              "id": "EAJava_boolean",
-              "name": "boolean",
-              "type": "uml:PrimitiveType",
-              "visibility": "public",
-              "stereotypes": [],
-              "fms_annotations": [],
-              "tagged_values": {},
-              "annotations": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "EAJavaTypesPackage",
-      "name": "EA_Java_Types_Package",
-      "type": "uml:Package",
-      "visibility": "public",
-      "stereotypes": [],
-      "fms_annotations": [],
-      "tagged_values": {},
-      "annotations": [],
-      "children": [
-        {
-          "id": "EAJava_boolean",
-          "name": "boolean",
-          "type": "uml:PrimitiveType",
-          "visibility": "public",
-          "stereotypes": [],
-          "fms_annotations": [],
           "tagged_values": {},
           "annotations": []
         }
