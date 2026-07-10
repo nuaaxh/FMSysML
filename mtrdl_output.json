@@ -69,7 +69,7 @@
       },
       {
         "name": "minimum sensor configuration for AP/FD engagement is met",
-        "type": "boolean",
+        "type": "Boolean",
         "attributes": {
           "stereotype": "Monitored",
           "owner": "Aircraft State"
@@ -464,9 +464,9 @@
             "AP_button connection"
           ],
           "events": [
-            "AP fast disconnection happens",
             "FMCP issue AP Engage Request",
-            "FMCP issues AP Engage Request"
+            "FMCP issues AP Engage Request",
+            "AP fast disconnection happens"
           ]
         },
         "encapsulated": {
@@ -528,10 +528,10 @@
             "TOGA_button connection"
           ],
           "events": [
-            "FMCP issues an FLC Request",
             "FMCP APPR button was converted from disconnection to connection",
-            "FMCP TOGA button is pressed",
-            "FMCP issues AP Engage Request"
+            "FMCP issues AP Engage Request",
+            "FMCP issues an FLC Request",
+            "FMCP TOGA button is pressed"
           ]
         }
       }
@@ -628,15 +628,15 @@
             "vertical STDBY mode is active"
           ],
           "events": [
-            "FMCP issues an FLC Request",
             "FMCP APPR button was converted from disconnection to connection",
-            "FMCP TOGA button is pressed",
-            "ASEL height capture condition become met",
-            "AP become engaged",
-            "any lateral mode become inactive",
-            "AP become disengaged",
             "FD become disengaged",
-            "Loc mode become inactive"
+            "FMCP issues an FLC Request",
+            "AP become engaged",
+            "ASEL height capture condition become met",
+            "any lateral mode become inactive",
+            "FMCP TOGA button is pressed",
+            "Loc mode become inactive",
+            "AP become disengaged"
           ]
         },
         "output": {
@@ -763,110 +763,110 @@
   "relations": [
     {
       "relType": "refine",
-      "e1": "Aircraft State",
+      "e1": "vertical_mode",
       "e2": "ALT_mode",
-      "name": "refine_Aircraft State_ALT_mode",
+      "name": "refine_vertical_mode_ALT_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "arm_of",
-      "e1": "AP",
-      "e2": "ASEL_arm_mode",
-      "name": "arm_of_AP_ASEL_arm_mode",
-      "params": {
-        "note": "端点通过位置推断"
-      }
-    },
-    {
-      "relType": "refine",
       "e1": "ASEL_arm_mode",
       "e2": "ASEL_mode",
-      "name": "refine_ASEL_arm_mode_ASEL_mode",
+      "name": "arm_of_ASEL_arm_mode_ASEL_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "FD_STDBY",
+      "e1": "vertical_mode",
+      "e2": "ASEL_mode",
+      "name": "refine_vertical_mode_ASEL_mode",
+      "params": {
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
+      }
+    },
+    {
+      "relType": "refine",
+      "e1": "vertical_mode",
       "e2": "FLC_mode",
-      "name": "refine_FD_STDBY_FLC_mode",
+      "name": "refine_vertical_mode_FLC_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "FMCP",
+      "e1": "vertical_mode",
       "e2": "FPA_mode",
-      "name": "refine_FMCP_FPA_mode",
+      "name": "refine_vertical_mode_FPA_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "FPA_mode",
+      "e1": "vertical_mode",
       "e2": "GA_mode",
-      "name": "refine_FPA_mode_GA_mode",
+      "name": "refine_vertical_mode_GA_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "GA_mode",
+      "e1": "vertical_mode",
       "e2": "GS_mode",
-      "name": "refine_GA_mode_GS_mode",
+      "name": "refine_vertical_mode_GS_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "GS_mode",
-      "e2": "lateral_mode",
-      "name": "refine_GS_mode_lateral_mode",
+      "e1": "lateral_mode",
+      "e2": "LOC_mode",
+      "name": "refine_lateral_mode_LOC_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "Roll_mode",
+      "e1": "vertical_mode",
       "e2": "TO_mode",
-      "name": "refine_Roll_mode_TO_mode",
+      "name": "refine_vertical_mode_TO_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "exclude",
-      "e1": "TO_mode",
+      "e1": "vertical_mode",
       "e2": "vertical STDBY",
-      "name": "exclude_TO_mode_vertical STDBY",
+      "name": "exclude_vertical_mode_vertical STDBY",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "vertical STDBY",
-      "e2": "vertical_mode",
-      "name": "refine_vertical STDBY_vertical_mode",
+      "e1": "vertical_mode",
+      "e2": "VS_mode",
+      "name": "refine_vertical_mode_VS_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     },
     {
       "relType": "refine",
-      "e1": "vertical STDBY",
-      "e2": "vertical_mode",
-      "name": "refine_vertical STDBY_vertical_mode",
+      "e1": "vertical_mode",
+      "e2": "WS_mode",
+      "name": "refine_vertical_mode_WS_mode",
       "params": {
-        "note": "端点通过位置推断"
+        "note": "通过修复后的高保真 XML 端点 ID 精准解析"
       }
     }
   ],
